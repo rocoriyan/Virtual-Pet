@@ -69,18 +69,39 @@ class Frog extends Animal{
     }*/
 };
 
-const petSubmit = document.getElementById('petSubmit'); //button that submits pet info in inputs (species & name)
+const petSubmit = document.getElementById('petSubmit'); //button that submits pet info in inputs (species & name). id name to be changed later maybe
+let petType = document.getElementById('petType'); //input for pet type. frog duck rock. just frog duck for me though. id name to be changed later maybe
+let petName = document.getElementById('petName'); //input for pet name. will be a text input probably. id name to be changed later maybe
+let warning = document.getElementById('warning'); //p tag that will warn u if you are missing values in your input. e.g. "please enter a name". will be hidden initially but have its value changes and be shown using js
+
 
 petSubmit.addEventListener('click', submitInfo => {
+    let messedUp = false;
+    warning.style.visibility = hidden;
+    warning.textContent = "";
+    if(petType.value != "Duck" || petType.value != "Frog"){ //if u didnt select an animal
+        warning.textContent = "Please select a type of pet (duck or frog)";
+        warning.style.visibility = visible;
+        messedUp = true;
+    }
+    if(petName.value.length < 1){ //if ur name is less than 1 character
+        warning.textContent = "Please enter a name for your pet";
+        warning.style.visibility = visible;
+        messedUp = true;
+    }
+
+    if(!messedUp){ // if you have both a pet type clicked AND more than 1 character written in the name box
+        choosePet(petType.value, petName.value);
+    }
 });
 
-function choosePet(petChosen, petName){
-    if(petChosen == "Duck"){
-        let animal = new Duck(petName);
+function choosePet(species, name){
+    if(species == "Duck"){
+        let animal = new Duck(name);
         return animal;
     }
-    else if(petChosen == "Frog"){
-        let animal = new Frog(petName);
+    else if(species == "Frog"){
+        let animal = new Frog(name);
         return animal;
     }
     else{
