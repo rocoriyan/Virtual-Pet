@@ -9,11 +9,6 @@ class Animal {
         thirst:100,
         boredom:100
     }
-    fill = {
-        hunger:4, //how much each action fills the respective meter
-        thirst:5,
-        boredom:3
-    }
     drain = {
         hunger:2, //how much the respective meter is drained per length of time
         thirst:2,
@@ -32,15 +27,10 @@ class Duck extends Animal{
     
     //variables
     meters = super.meters;
-    fill = {
-        hunger:4, //how much each action fills the respective meter
-        thirst:5,
-        boredom:3
-    }
     drain = {
-        hunger:2, //how much the respective meter is drained per length of time
+        hunger:1, //how much the respective meter is drained per length of time
         thirst:2,
-        boredom:1
+        boredom:2
     }
 
     //functions
@@ -60,11 +50,6 @@ class Frog extends Animal{
     
     //variables
     meters = super.meters;
-    fill = {
-        hunger:5, //how much each action fills the respective meter
-        thirst:3,
-        boredom:4
-    }
     drain = {
         hunger:2, //how much the respective meter is drained per length of time
         thirst:1,
