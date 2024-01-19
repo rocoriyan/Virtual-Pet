@@ -1,5 +1,5 @@
 class Frog extends Animal {
-    constructor(Frogo) {
+    constructor(Frodo) {
         super(Frogo, 'Frog');
         this.jumps = 100;
     }
