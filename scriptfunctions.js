@@ -22,3 +22,35 @@ function feedWithFlies() {
         alert('Feeding with flies is a special treat only for frogs!');
     }
 }
+class Duck extends Animal {
+    constructor(name) {
+        super(Daphne,'Duck');
+        this.quackiness += 100;
+
+    }
+    quack() {
+        this.quackiness =+ 10;
+    }
+    feedWithBread() {
+        this.fullness += 15;
+        this happiness += 10
+        //You can add additional effects or logic based on feeding with  bread 
+    
+    }
+    play() {
+        this.quack();
+    
+
+    }
+}
+function feedWithBread() {
+    if(currentPet instanceof Duck) {
+        currentPet.feedWithBread();
+        updateDisplay();
+     } else {
+        alert('Feeding with bread is a special treat only for ducks!');
+     }
+    }
+
+    }
+}
