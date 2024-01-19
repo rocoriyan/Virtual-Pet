@@ -1,0 +1,31 @@
+body {
+    font-family: 'Arial', sans-serif;
+
+}
+#introContainer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    margin-bottom: 20px;
+}
+#introContainer p {
+    color: #333;
+
+}
+#introContainer p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+#duckContainer,
+#frogContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 5px;
+}
+
+}
