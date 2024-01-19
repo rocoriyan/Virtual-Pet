@@ -7,7 +7,28 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Virtual Pet</h1>
+        <h1></h1>
+        <h2></h2>
+
+        <form>
+            <fieldset>
+                <div class="legend">
+                    <legend>Select an animal</legend>
+                </div>
+                <div class="animal-inputs">
+                    <div class="duck">
+                        <input type="radio" id="duck" name="animal-choice" value="Duck">
+                        <label for="duck">Duck</label>
+                    </div>
+                    <div class="frog">
+                        <input type="radio" id="frog" name="animal-choice" value="Frog">
+                        <label for="frog">Frog</label>
+                    </div>
+                </div>
+                <button type="submit">Select</button>
+            </fieldset>
+        </form>
+
         <script src="script.js"></script>
     </body>
 </html>

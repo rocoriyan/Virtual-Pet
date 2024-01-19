@@ -1,0 +1,51 @@
+@font-face {
+    font-family: 'Lexend';
+    src: url('./fonts/Lexend-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    src: url('./fonts/Lexend-Medium.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lexend';
+    src: url('./fonts/Lexend-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+}
+body {
+    font-family: 'Lexend';
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+fieldset {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+.legend {
+    display: flex;
+    justify-content: center;
+}
+.animal-inputs {
+    display: flex;
+    justify-content: center;
+    margin: 10% 5% 10% 5%;
+}
+.duck {
+    margin: 0 5% 0 5%;
+}
+.frog {
+    margin: 0 5% 0 5%;
+}
+button {
+    align-self: center;
+}
