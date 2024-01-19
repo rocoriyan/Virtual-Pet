@@ -10,22 +10,22 @@
         <h1></h1>
         <h2></h2>
 
-        <form>
+        <form class="animal-input">
             <fieldset>
-                <div class="legend">
+                <div class="animal-input__header">
                     <legend>Select an animal</legend>
                 </div>
-                <div class="animal-inputs">
-                    <div class="duck">
+                <div class="animal-input__choices">
+                    <div class="animal-input__choices--duck">
                         <input type="radio" id="duck" name="animal-choice" value="Duck">
                         <label for="duck">Duck</label>
                     </div>
-                    <div class="frog">
+                    <div class="animal-input__choices--frog">
                         <input type="radio" id="frog" name="animal-choice" value="Frog">
                         <label for="frog">Frog</label>
                     </div>
                 </div>
-                <button type="submit">Select</button>
+                <button class="animal-input__button" type="submit">Select</button>
             </fieldset>
         </form>
 
