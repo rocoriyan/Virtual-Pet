@@ -1,61 +1,70 @@
-class Character {
-    constructor(mood) {
-        this.mood = mood;
+let hunger = 50;
+let happiness = 50;
+let energy = 50;
 
-        // Stats
-        this.stats = {
-            hunger: 100,
-            thirst: 100,
-            energy: 100,
-            boredom: 100,
-        };
-    }
+let petType = "duck"; // Default pet type
 
-    // Methods for the character class
-    feed() {
-        this.stats.hunger += 25;
-        this.stats.thirst -= 25;
-        this.stats.energy -= 25;
-    }
+function choosePet() {
+    petType = document.getElementById('pet-selection').value;
+    // You can add logic here to change the appearance of the pet based on the selected type
+    updateStats(); // Update stats to reflect the change in pet type
+}
 
-    hydrate() {
-        this.stats.thirst += 25;
-        this.stats.hunger -= 25;
-        this.stats.energy -= 25;
-    }
+// Modify the updateStats function to change the appearance of the pet based on the selected type
+function updateStats() {
 
-    nap() {
-        this.stats.energy -= 25;
-        this.stats.hunger -= 25;
-        this.stats.thirst -= 25;
-        this.stats.boredom += 25;
-    }
-
-    play() {
-        this.stats.energy += 25;
-        this.stats.hunger -= 25;
-        this.stats.thirst -= 25;
-        this.stats.boredom -= 25;
+    // Customize the appearance based on the selected pet type
+    if (petType === "duck") {
+        // Adjust appearance for duck
+        document.getElementById('pet').style.backgroundColor = "#ffcc00";
+    } else if (petType === "frog") {
+        // Adjust appearance for frog
+        document.getElementById('pet').style.backgroundColor = "#ff9900";
+    } else if (petType === "rock") {
+        // Adjust appearance for rock
+        document.getElementById('pet').style.backgroundColor = "#66ccff";
     }
 }
 
-class frog extends Character {
-    constructor(mood) {
-        super(mood);
-    }
+function updateStats() {
+    document.getElementById('pet').style.width = `${hunger}px`;
+    document.getElementById('pet').style.height = `${hunger}px`;
 
+    document.getElementById('pet').style.backgroundColor = `rgb(${255 - happiness}, ${255}, ${255 - happiness})`;
 }
 
-class duck extends Character {
-    constructor(mood) {
-        super(mood);
+function feed() {
+    if (hunger < 90) {
+        hunger += 10;
+    } else {
+        happiness -= 10;
     }
-
+    updateStats();
 }
 
-// class rock extends Character {
-//     constructor(mood) {
-//         super(mood);
-//     }
+function play() {
+    if (happiness < 90) {
+        happiness += 10;
+    } else {
+        energy -= 10;
+    }
+    updateStats();
+}
 
-// }
+function sleep() {
+    if (energy < 90) {
+        energy += 10;
+    } else {
+        happiness -= 10;
+    }
+    updateStats();
+}
+
+// Update stats every second
+setInterval(function () {
+    hunger -= 1;
+    happiness -= 1;
+    energy -= 1;
+
+    updateStats();
+}, 1000);

@@ -8,7 +8,32 @@
 </head>
 
 <body>
-   
+  <div class="tamagotchi-container">
+    <div class="tamagotchi">
+        <div id="pet"></div>
+        <div class="stat-bar">
+            <label>Hunger</label>
+            <progress id="hunger-bar" value="50" max="100"></progress>
+        </div>
+        <div class="stat-bar">
+            <label>Happiness</label>
+            <progress id="happiness-bar" value="50" max="100"></progress>
+        </div>
+        <div class="stat-bar">
+            <label>Energy</label>
+            <progress id="energy-bar" value="50" max="100"></progress>
+        </div>
+        <label for="pet-selection">Choose your pet:</label>
+        <select id="pet-selection" onchange="choosePet()">
+            <option value="duck">Duck</option>
+            <option value="frog">Frog</option>
+            <option value="rock">Rock</option>
+        </select>
+        <button onclick="feed()">Feed</button>
+        <button onclick="play()">Play</button>
+        <button onclick="sleep()">Sleep</button>
+    </div>
+</div>
 
   <script src="main.js"></script>
 </body>
